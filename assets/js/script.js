@@ -11,9 +11,10 @@ function writePassword() {
 }
 
 // Global variables
-var symbolArray = ["!","@","#","$","^","&","*"];
 var characters = ["letter","number","symbol"];
-var letters = /^[A-Za-z]+$/;
+var symbol = ["!","@","#","$","^","&","*"];
+var lowerCaseLettersArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var upperCaseLettersArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var numerics = [0,1,2,3,4,5,6,7,8,9];
 
 //password length function varibles made global for later reference 
@@ -22,6 +23,7 @@ var specialCharacter
 var upperCaseLetters
 var lowerCaseLetters
 var numerics
+var finalPassword
 
 // function to ask user what they want and to store info in var above
 var passwordInput = function () {
@@ -32,10 +34,13 @@ var passwordInput = function () {
 
 
 // If player enters in invalid answer bring back to question
-  if (passwordLengthInput < 8 || passwordLengthInput > 128 ||passwordLengthInput === "" || passwordLengthInput === "null") {
+  if (passwordLengthInput < 8 && passwordLengthInput > 128 &&passwordLengthInput === "" && passwordLengthInput === "null" && !passwordLengthInput) {
     window.alert("You need to provide a valid answer! Please try again.");
     return console.log(passwordInput());
   }
+
+  // reset form
+  // formEl.reset();
 
   // Would you like special characters? 
   specialCharacter = window.prompt("Would you like this password to contain special characters? ok = yes cancle = no" ); 
@@ -55,23 +60,22 @@ var passwordInput = function () {
 passwordInput();
 
 var passwordRandomizer = function(){
-
   // run through loop amount of times indicated by password length
   for (var i = 0; i < passwordLengthInput; i++) {
+  
+  // then we need to randomly select between each loop
 
-  // if special letter true
-    if (specialCharacter === true) {
-      randomNumber * specialCharacter
+  if ( lowerCaseLetters === true) {
+    var lowerCaseLettersRandomizer = function(){
+      // gives me a random number between 0-26
+      var uniqueNumber26 = Math.floor(Math.random()*26);
+      // need to take this number to identify 
+      finalPassword =  lowerCaseLetters[uniqueNumber26,i];
+      // need to tell code to save this value in final password
+      // then move on to next criteria
+    } 
     }
-    // need to store each loop result and add to it as we loop
-  // else no
-
-  // if lower case true 
-  // else no
-
-  // if numeric ture
-  // else false
-  }
+  };
 
 }
 passwordRandomizer();
