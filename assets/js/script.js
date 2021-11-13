@@ -10,10 +10,10 @@ function writePassword() {
 
 
 // Global variables, options user can select for
-var specialCharactersArray = "!@#$^&*";
-var lowerCaseLettersArray = "abcdefghijklmnopqrstuvwxyz";
-var upperCaseLettersArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var NumericsArray = "0123456789";
+var specialCharactersList = "@,%+\/!#$^?:)(}{][~-_.";
+var lowerCaseLettersList = "abcdefghijklmnopqrstuvwxyz";
+var upperCaseLettersList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var NumericsList = "0123456789";
 
 //password length function varibles made global for later reference 
 var passwordLengthInput
@@ -42,7 +42,7 @@ var generatePassword = function () {
 
   //  creating array possibleCharacters to be randomly selected from for 
   if (specialCharacter === true){
-    possibleCharacters += specialCharactersArray;
+    possibleCharacters += specialCharactersList;
   };
   console.log('special char', possibleCharacters);
 
@@ -51,7 +51,7 @@ var generatePassword = function () {
 
   // if user would like lowercaseletters include them in the array
   if (lowerCaseLetters === true){
-    possibleCharacters += lowerCaseLettersArray;
+    possibleCharacters += lowerCaseLettersList;
   };
   console.log('lower case' , possibleCharacters);
 
@@ -60,7 +60,7 @@ var generatePassword = function () {
 
   // if so include upper case letters in the array
   if (upperCaseLetters === true){
-    possibleCharacters += upperCaseLettersArray;
+    possibleCharacters += upperCaseLettersList;
   };
   console.log('upper case' , possibleCharacters);
 
@@ -69,7 +69,7 @@ var generatePassword = function () {
 
   // if so inculde numbers in array
   if (numerics === true){
-    possibleCharacters += NumericsArray;
+    possibleCharacters += NumericsList;
   };
   console.log('numerics', possibleCharacters);
 
