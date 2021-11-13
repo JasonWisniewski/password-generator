@@ -5,7 +5,7 @@ This project purpose isto make a password generator that asks the user how long 
 This project taught me about variouse JavaScript funcitons and code orgainzation. 
 
 ## Installation
-to install the application clone the code in the repository.  The site is also live at 
+to install the application clone the code in the repository.  The application is also live at https://jasonwisniewski.github.io/password-generator/
 ## Usage
 This projecgt can be used by anyone who wants to view skills I have developed in JavaScript.
 
